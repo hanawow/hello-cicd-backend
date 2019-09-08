@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // get quote
-app.get('/quote', cors(corsOptions), (req, res) => {
+app.get('/quote', /*cors(corsOptions), */(req, res) => {
     const index = Math.floor(Math.random() * quotes.length);
     res.json(quotes[index]);
 });
